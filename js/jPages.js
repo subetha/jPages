@@ -213,6 +213,7 @@
 
       // custom previous
       if (this._previous.length) {
+        this._previous.unbind("click.jPages");
         this._previous.bind("click.jPages", this.bind(function() {
           var newPage = this._currentPageNum - 1;
           if (this.validNewPage(newPage)) {
@@ -224,6 +225,7 @@
 
       // custom next
       if (this._next.length) {
+        this._next.unbind("click.jPages");
         this._next.bind("click.jPages", this.bind(function() {
           var newPage = this._currentPageNum + 1;
           if (this.validNewPage(newPage)) {
